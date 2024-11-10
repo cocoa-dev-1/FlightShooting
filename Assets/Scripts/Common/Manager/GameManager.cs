@@ -7,7 +7,7 @@ public class GameManager : Singleton<GameManager>
 
     public void Play(CharacterType selectedPlayerType)
     {
-        Debug.Log($"Selected player type: {selectedPlayerType}");
+        // Debug.Log($"Selected player type: {selectedPlayerType}");
 
         SelectedPlayerType = selectedPlayerType;
         SceneManager.LoadScene("GameScene");

@@ -8,11 +8,6 @@ public class PlayerSelector : MonoBehaviour
 
     public event Action<CharacterType> OnCharacterSelected;
 
-    private void Start()
-    {
-        OnCharacterSelected?.Invoke(selectedCharacterType);
-    }
-
     public void SelectCharacter(CharacterType characterType)
     {
         if (!isSelected) isSelected = true;
