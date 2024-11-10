@@ -8,13 +8,7 @@ public class PlayerMovement : MonoBehaviour, IMovable
     private Vector2 direction = Vector2.zero;
     private bool isMoving = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        UpdateManager.Instance.Add(HandleUpdate);
-    }
-
-    void HandleUpdate(object sender, EventArgs e)
+    void Update()
     {
         if (isMoving)
         {
@@ -36,10 +30,5 @@ public class PlayerMovement : MonoBehaviour, IMovable
     public void Stop()
     {
         isMoving = false;
-    }
-
-    void OnDestroy()
-    {
-        UpdateManager.Instance.Remove(HandleUpdate);
     }
 }
