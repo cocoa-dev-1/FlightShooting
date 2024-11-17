@@ -703,6 +703,7 @@ MonoBehaviour:
   - {fileID: 3547494481482798801, guid: 4a99782eb3a9e2446bc449256f61e511, type: 3}
   - {fileID: 3547494481482798801, guid: f7b5071d708972249b5a484449a8d3c3, type: 3}
   - {fileID: 3547494481482798801, guid: 2a8da74e82e45c44bb7a9565440a8446, type: 3}
+  selectedPlayerData: {fileID: 11400000, guid: d798fc756a06ece479de3448aeabddaa, type: 2}
 --- !u!1 &1469486837
 GameObject:
   m_ObjectHideFlags: 0

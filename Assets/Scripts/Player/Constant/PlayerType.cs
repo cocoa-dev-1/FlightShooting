@@ -1,4 +1,4 @@
-public enum CharacterType
+public enum PlayerType
 {
     FIRST,
     SECOND,

@@ -1,23 +1,19 @@
+using System;
 using UnityEngine;
 
-public class PlayerCharacter : MonoBehaviour
+public class PlayerSelectView : MonoBehaviour
 {
-    [SerializeField]
-    private CharacterType playerType;
-
-    public CharacterType PlayerType => playerType;
+    [SerializeField] private PlayerType playerType;
 
     private SpriteRenderer sr;
-    private PlayerSelector playerSelector;
     private Color baseColor;
     private const float colorChangeAmount = 0.4f;
+
+    public event Action<PlayerType> PlayerSelected;
 
     private void Start()
     {
         sr = GetComponentInChildren<SpriteRenderer>();
-        playerSelector = FindFirstObjectByType<PlayerSelector>();
-
-        playerSelector.OnCharacterSelected += OnCharacterSelected;
 
         baseColor = sr.color;
         ChangeColor(false);
@@ -35,7 +31,7 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    private void OnCharacterSelected(CharacterType selectedCharacterType)
+    public void OnPlayerChanged(PlayerType selectedCharacterType)
     {
         if (selectedCharacterType == playerType)
         {
@@ -49,6 +45,6 @@ public class PlayerCharacter : MonoBehaviour
 
     private void OnMouseUpAsButton()
     {
-        playerSelector.SelectCharacter(playerType);
+        PlayerSelected?.Invoke(playerType);
     }
 }
