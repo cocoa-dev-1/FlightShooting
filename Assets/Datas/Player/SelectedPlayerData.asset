@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3102167a4c0ab9f479528cd89fbf986b, type: 3}
   m_Name: SelectedPlayerData
   m_EditorClassIdentifier: 
-  <SelectedPlayerType>k__BackingField: 0
-  <IsSelected>k__BackingField: 0
+  basePlayerType: 0
+  baseIsSelected: 0

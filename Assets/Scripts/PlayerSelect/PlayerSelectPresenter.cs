@@ -10,5 +10,8 @@ public class PlayerSelectPresenter : MonoBehaviour
     {
         view.PlayerSelected += model.SelectPlayer;
         model.PlayerChanged += view.OnPlayerChanged;
+
+        if (model.IsSelected)
+            view.OnPlayerChanged(model.SelectedPlayerType);
     }
 }

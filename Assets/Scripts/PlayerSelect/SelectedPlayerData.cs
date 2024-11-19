@@ -4,15 +4,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "SelectedPlayerData", menuName = "Scriptable Objects/SelectedPlayerData")]
 public class SelectedPlayerData : ScriptableObject
 {
-    [field: SerializeField] public PlayerType SelectedPlayerType { get; private set; }
-    [field: SerializeField] public bool IsSelected { get; private set; } = false;
+    [SerializeField] private PlayerType basePlayerType = PlayerType.FIRST;
+    [SerializeField] private bool baseIsSelected = false;
+
+    public PlayerType SelectedPlayerType { get; private set; }
+    public bool IsSelected { get; private set; }
 
     public event Action<PlayerType> PlayerChanged;
 
     private void OnEnable()
     {
-        SelectedPlayerType = PlayerType.FIRST;
-        IsSelected = false;
+        SelectedPlayerType = basePlayerType;
+        IsSelected = baseIsSelected;
     }
 
     public void SelectPlayer(PlayerType playerType)
