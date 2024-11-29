@@ -14,4 +14,10 @@ public class PlayerSelectPresenter : MonoBehaviour
         if (model.IsSelected)
             view.OnPlayerChanged(model.SelectedPlayerType);
     }
+
+    void OnDestroy()
+    {
+        view.PlayerSelected -= model.SelectPlayer;
+        model.PlayerChanged -= view.OnPlayerChanged;
+    }
 }
