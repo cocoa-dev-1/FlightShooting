@@ -59,6 +59,12 @@ public class Pool
         pool.Push(obj);
     }
 
+
+    public void ClearPool()
+    {
+        pool.Clear();
+    }
+
     public static Pool Create(GameObject prefab, Transform parent, int size)
     {
         Pool pool = new()

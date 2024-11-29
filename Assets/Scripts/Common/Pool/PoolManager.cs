@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PoolManager : Singleton<PoolManager>
 {
@@ -7,6 +8,7 @@ public class PoolManager : Singleton<PoolManager>
 
     private void Start()
     {
+        SceneManager.sceneLoaded += OnNewSceneLoaded;
         for (int i = 0; i < pools.Length; i++)
         {
             pools[i].Initialize();
@@ -51,5 +53,19 @@ public class PoolManager : Singleton<PoolManager>
                 return;
             }
         }
+    }
+
+    private void OnNewSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
+    {
+        for (int i = 0; i < pools.Length; i++)
+        {
+            pools[i].ClearPool();
+            pools[i].Initialize();
+        }
+    }
+
+    private void Destroy()
+    {
+        SceneManager.sceneLoaded -= OnNewSceneLoaded;
     }
 }
