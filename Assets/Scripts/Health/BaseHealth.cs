@@ -7,7 +7,7 @@ public class BaseHealth : MonoBehaviour, IDamageable
 
     [SerializeField] protected int maxHP;
     protected int currentHP;
-    public int CurrentHP { get; protected set; }
+    public int CurrentHP { get => currentHP; }
 
     public void OnEnable()
     {

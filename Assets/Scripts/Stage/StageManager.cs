@@ -1,12 +1,14 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class StageManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] enemyPrefabs;
     [SerializeField] private StageInfo[] stageInfos;
     [SerializeField] private int currentStageIndex = 0;
+    [SerializeField] private int currentStage = 0;
     [SerializeField] private int currentLeftEnemyCount = 0;
 
     public event Action<int> StageChanged;
@@ -25,7 +27,7 @@ public class StageManager : MonoBehaviour
             yield return new WaitForSeconds(stageInfo.SpawnCoolTime);
 
             int enemyIndex = UnityEngine.Random.Range(0, stageInfo.SpawnableEnemyList.Length);
-            GameObject enemyPrefab = enemyPrefabs[enemyIndex];
+            GameObject enemyPrefab = enemyPrefabs[stageInfo.SpawnableEnemyList[enemyIndex]];
             EnemyController enemyController = PoolManager.Instance.GetOne<EnemyController>(enemyPrefab.name);
             enemyController.EnemyDead += OnEnemyDead;
             enemyController.gameObject.transform.position = new Vector3(GetRandomSpawnPosition(), 4, 0);
@@ -40,18 +42,31 @@ public class StageManager : MonoBehaviour
 
     void NextStage()
     {
-        currentStageIndex++;
+        currentStage++;
 
-        if (currentStageIndex == stageInfos.Length)
+        StageInfo currStageInfo = stageInfos[currentStageIndex];
+        if (currStageInfo.stageEnd == currentStage)
         {
-            GameManager.Instance.GameClear();
-            return;
+            if (IsLastStage())
+            {
+                GameManager.Instance.GameClear();
+                return;
+            }
+
+            currentStageIndex++;
         }
 
-        StageChanged?.Invoke(currentStageIndex + 1);
+        StageChanged?.Invoke(currentStage + 1);
 
         currentLeftEnemyCount = stageInfos[currentStageIndex].SpawnQuantity;
         StartCoroutine(IESpawnEnemies(stageInfos[currentStageIndex]));
+    }
+
+    bool IsLastStage()
+    {
+        if (currentStageIndex + 1 == stageInfos.Length) return true;
+
+        return false;
     }
 
     void OnEnemyDead()

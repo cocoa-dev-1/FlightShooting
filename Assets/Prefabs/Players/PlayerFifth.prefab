@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: -1852892917703861250}
   - component: {fileID: 1024261741296308730}
   - component: {fileID: 6757486690795715819}
+  - component: {fileID: -4325963928990677202}
   m_Layer: 0
   m_Name: PlayerFifth
   m_TagString: Player
@@ -257,6 +258,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.4
+--- !u!114 &-4325963928990677202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547494481482798801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b843363eb6298074e94d6ce6c7ee81fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7399869481087164618
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,4 +316,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletName: StraightBullet
   bulletTarget: Enemy
-  shootCoolTime: 2
+  shootCoolTime: 0.1

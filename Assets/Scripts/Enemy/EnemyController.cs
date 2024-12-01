@@ -52,4 +52,13 @@ public class EnemyController : MonoBehaviour
             EnemyDead -= (Action)handler;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Wall"))
+        {
+            Dead();
+            PoolManager.Instance.Return(name, gameObject);
+        }
+    }
 }

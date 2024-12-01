@@ -1,25 +1,14 @@
 using UnityEngine;
 
-public class StraightShooter : MonoBehaviour, IShootable
+public class Shooter : MonoBehaviour, IShootable
 {
-    [SerializeField] private string bulletName;
-    [SerializeField] private string bulletTarget;
+    [SerializeField] protected string bulletName;
+    [SerializeField] protected string bulletTarget;
 
-    [SerializeField] private float shootCoolTime = 3.0f;
-    private float lastShootTime = 0f;
+    [SerializeField] protected float shootCoolTime = 3.0f;
+    protected float lastShootTime = 0f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-        // Debug.Log(Time.realtimeSinceStartup);
-    }
-
-    public void Shoot()
+    public virtual void Shoot()
     {
         if (!CanShoot()) return;
         lastShootTime = Time.realtimeSinceStartup;
@@ -31,7 +20,7 @@ public class StraightShooter : MonoBehaviour, IShootable
         bullet.Fire(bulletTarget, Vector2.up);
     }
 
-    private bool CanShoot()
+    public bool CanShoot()
     {
         if (lastShootTime + shootCoolTime < Time.realtimeSinceStartup)
             return true;

@@ -4,6 +4,11 @@ public class PlayerController : MonoBehaviour
 {
     private BaseHealth health;
 
+    void Awake()
+    {
+        health = GetComponent<BaseHealth>();
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hp == 0)
         {
-
+            GameManager.Instance.GameOver();
         }
     }
 }

@@ -250,59 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86772bdfe54ca9f43bdcbbc3947f8efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &808626705
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 808626706}
-  - component: {fileID: 808626707}
-  m_Layer: 0
-  m_Name: PoolManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &808626706
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808626705}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &808626707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 808626705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be16257901865794b947dfe4f06385e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pools:
-  - name: StraightBullet
-    prefab: {fileID: 9048556282187106441, guid: 9a4cc03091b90a0429679a0990c89c4d, type: 3}
-    parent: {fileID: 0}
-    size: 10
-  - name: Enemy
-    prefab: {fileID: 4476675794121903433, guid: 4618145db5254ae4f91bfc386f1cdefe, type: 3}
-    parent: {fileID: 0}
-    size: 10
 --- !u!1 &1035338225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2259,5 @@ SceneRoots:
   - {fileID: 2003906124}
   - {fileID: 1411544956}
   - {fileID: 1923623339}
-  - {fileID: 808626706}
   - {fileID: 646950232}
   - {fileID: 1920546204}

@@ -12,4 +12,9 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene("LobbyScene");
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
 }
