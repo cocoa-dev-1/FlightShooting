@@ -7,4 +7,9 @@ public class GameManager : Singleton<GameManager>
     {
         SceneManager.LoadScene("GameScene");
     }
+
+    public void GameClear()
+    {
+        SceneManager.LoadScene("LobbyScene");
+    }
 }

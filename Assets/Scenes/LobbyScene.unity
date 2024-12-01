@@ -299,6 +299,10 @@ MonoBehaviour:
     prefab: {fileID: 9048556282187106441, guid: 9a4cc03091b90a0429679a0990c89c4d, type: 3}
     parent: {fileID: 0}
     size: 10
+  - name: Enemy
+    prefab: {fileID: 4476675794121903433, guid: 4618145db5254ae4f91bfc386f1cdefe, type: 3}
+    parent: {fileID: 0}
+    size: 10
 --- !u!1 &1035338225
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +907,7 @@ Transform:
   m_GameObject: {fileID: 1920546203}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.55050266, y: -0.47491363, z: 0.05659637}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

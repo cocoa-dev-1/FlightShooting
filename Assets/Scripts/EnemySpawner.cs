@@ -1,16 +1,18 @@
 using UnityEngine;
 
-public class StageLoader : MonoBehaviour
+public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject[] enemyPrefabs;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

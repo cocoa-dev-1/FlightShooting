@@ -99,11 +99,12 @@ GameObject:
   - component: {fileID: 679877712702398607}
   - component: {fileID: 1183884925903305631}
   - component: {fileID: 4446131862992063230}
+  - component: {fileID: -5074004378903011924}
   - component: {fileID: 1024261741296308730}
   - component: {fileID: 6757486690795715819}
   m_Layer: 0
   m_Name: PlayerSixth
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +180,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &-5074004378903011924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3547494481482798801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 686658e8e238ef444a67b3376e5e2c1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 50
 --- !u!50 &1024261741296308730
 Rigidbody2D:
   serializedVersion: 5

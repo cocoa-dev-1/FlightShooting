@@ -2,10 +2,19 @@ using UnityEngine;
 
 public class StraightBullet : BaseBullet
 {
-    [SerializeField] private Rigidbody2D rb;
+    private Vector2 dir = Vector2.zero;
 
-    public override void Fire(Vector2 dir)
+    private void Update()
     {
-        rb.AddForce(dir * spead);
+        if (dir == Vector2.zero)
+            return;
+
+        transform.Translate(spead * Time.deltaTime * dir);
+    }
+
+    public override void Fire(string target, Vector2 dir)
+    {
+        this.target = target;
+        this.dir = dir.normalized;
     }
 }

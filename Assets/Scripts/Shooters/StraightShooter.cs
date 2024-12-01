@@ -3,6 +3,7 @@ using UnityEngine;
 public class StraightShooter : MonoBehaviour, IShootable
 {
     [SerializeField] private string bulletName;
+    [SerializeField] private string bulletTarget;
 
     [SerializeField] private float shootCoolTime = 3.0f;
     private float lastShootTime = 0f;
@@ -24,10 +25,10 @@ public class StraightShooter : MonoBehaviour, IShootable
         lastShootTime = Time.realtimeSinceStartup;
 
         BaseBullet bullet = PoolManager.Instance.GetOne<BaseBullet>(bulletName);
-        bullet.gameObject.transform.position = gameObject.transform.position;
-        bullet.gameObject.transform.rotation = gameObject.transform.rotation;
+        bullet.gameObject.transform.position = transform.position;
+        bullet.gameObject.transform.rotation = transform.rotation;
 
-        bullet.Fire(Vector2.down);
+        bullet.Fire(bulletTarget, Vector2.up);
     }
 
     private bool CanShoot()
