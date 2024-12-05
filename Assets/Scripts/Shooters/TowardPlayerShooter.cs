@@ -18,9 +18,10 @@ public class TowardPlayerShooter : Shooter
 
         BaseBullet bullet = PoolManager.Instance.GetOne<BaseBullet>(bulletName);
         bullet.gameObject.transform.position = transform.position;
-        // bullet.gameObject.transform.rotation = transform.rotation;
+        bullet.gameObject.transform.rotation = Quaternion.identity;
 
         // Debug.Log(CalculateDirection());
+        // Debug.DrawLine(transform.position, transform.position + (Vector3)CalculateDirection(), Color.red, 2f);
 
         bullet.Fire(bulletTarget, CalculateDirection().normalized);
     }

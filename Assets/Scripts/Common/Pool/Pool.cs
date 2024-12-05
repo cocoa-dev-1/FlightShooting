@@ -15,9 +15,13 @@ public class Pool
 
     public string Name => name;
 
-    public void Initialize()
+    public void Initialize(GameObject manager)
     {
         pool = new Stack<GameObject>();
+        if (parent == null)
+        {
+            parent = manager.transform;
+        }
 
         for (int i = 0; i < size; i++)
         {
@@ -73,7 +77,7 @@ public class Pool
             parent = parent,
             size = size
         };
-        pool.Initialize();
+        pool.Initialize(null);
 
         return pool;
     }

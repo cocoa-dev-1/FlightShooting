@@ -8,10 +8,9 @@ public class PoolManager : Singleton<PoolManager>
 
     private void Start()
     {
-        SceneManager.sceneLoaded += OnNewSceneLoaded;
         for (int i = 0; i < pools.Length; i++)
         {
-            pools[i].Initialize();
+            pools[i].Initialize(gameObject);
         }
     }
 
@@ -53,19 +52,5 @@ public class PoolManager : Singleton<PoolManager>
                 return;
             }
         }
-    }
-
-    private void OnNewSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
-    {
-        for (int i = 0; i < pools.Length; i++)
-        {
-            pools[i].ClearPool();
-            pools[i].Initialize();
-        }
-    }
-
-    private void Destroy()
-    {
-        SceneManager.sceneLoaded -= OnNewSceneLoaded;
     }
 }

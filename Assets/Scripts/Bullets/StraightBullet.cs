@@ -4,6 +4,11 @@ public class StraightBullet : BaseBullet
 {
     private Vector2 dir = Vector2.zero;
 
+    private void OnDisable()
+    {
+        dir = Vector2.zero;
+    }
+
     private void Update()
     {
         if (dir == Vector2.zero)

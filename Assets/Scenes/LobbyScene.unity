@@ -206,6 +206,147 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &642967378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642967380}
+  - component: {fileID: 642967379}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &642967379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642967378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be16257901865794b947dfe4f06385e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - name: StraightBullet
+    prefab: {fileID: 9048556282187106441, guid: 9a4cc03091b90a0429679a0990c89c4d, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: FastBullet
+    prefab: {fileID: 9048556282187106441, guid: aac7db80cab34b34aafd5221f57b5b82, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: SlowBullet
+    prefab: {fileID: 9048556282187106441, guid: e323d4e6088e27a47a8ed7acb9584f8a, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: FastBullet
+    prefab: {fileID: 9048556282187106441, guid: aac7db80cab34b34aafd5221f57b5b82, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy
+    prefab: {fileID: 4476675794121903433, guid: 4618145db5254ae4f91bfc386f1cdefe, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy2
+    prefab: {fileID: 4129926323990922096, guid: 857f2319989dd0a4fbb2b43eef6c98cb, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy3
+    prefab: {fileID: 4129926323990922096, guid: 077d4e1cd1b746f4dad517598b55fc0f, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy4
+    prefab: {fileID: 4129926323990922096, guid: 56e7656d21bb809439f45f0181521394, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy5
+    prefab: {fileID: 4129926323990922096, guid: 3196d906abefe8442adbc997a874f2fc, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy6
+    prefab: {fileID: 4476675794121903433, guid: ce7ef58d686bb6c49a7e9713918a7880, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy7
+    prefab: {fileID: 4129926323990922096, guid: b951a9586d5b68c448dd6da2bd4a6f93, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy8
+    prefab: {fileID: 4129926323990922096, guid: 50dbc38669478324bba8df91a334b84e, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy9
+    prefab: {fileID: 4129926323990922096, guid: b70aad62bfb26054787c75d861f8c2cd, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy10
+    prefab: {fileID: 4129926323990922096, guid: c09131a5b654a7e4593ffe0d53b017a3, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy11
+    prefab: {fileID: 4476675794121903433, guid: 86eb170a5d118a94db354605b5c24d5e, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy12
+    prefab: {fileID: 4129926323990922096, guid: 882a2a7e0adb1884a8ecc960dc7ba86e, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy13
+    prefab: {fileID: 4129926323990922096, guid: c43f81ad338f6054ca34bf997d961454, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy14
+    prefab: {fileID: 4129926323990922096, guid: 36c6a3a7501b1ca4ca3cdd5e0832da14, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy15
+    prefab: {fileID: 4129926323990922096, guid: 2395e78b1bf51f046bfd46399765ff36, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy16
+    prefab: {fileID: 4476675794121903433, guid: 605dacb04566a9f4d936ee755be84308, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy17
+    prefab: {fileID: 4129926323990922096, guid: f8c3144b33aec314d85ac4d4f6f56624, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy18
+    prefab: {fileID: 4129926323990922096, guid: 8a2802df8ee596c43af1b7c6cc51ac0e, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy19
+    prefab: {fileID: 4129926323990922096, guid: 6562af3bc41852247a2ffc5238a76bf9, type: 3}
+    parent: {fileID: 0}
+    size: 10
+  - name: Enemy20
+    prefab: {fileID: 4129926323990922096, guid: 363edcfe888fe0046902a016d4f4e400, type: 3}
+    parent: {fileID: 0}
+    size: 10
+--- !u!4 &642967380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642967378}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &646950230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,3 +2402,4 @@ SceneRoots:
   - {fileID: 1923623339}
   - {fileID: 646950232}
   - {fileID: 1920546204}
+  - {fileID: 642967380}
