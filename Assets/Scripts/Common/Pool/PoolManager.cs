@@ -46,11 +46,16 @@ public class PoolManager : Singleton<PoolManager>
 
         for (int i = 0; i < pools.Length; i++)
         {
-            if (pools[i].Name == name)
+            if (pools[i].Name == GetObjName(name))
             {
                 pools[i].Return(obj);
                 return;
             }
         }
+    }
+
+    private string GetObjName(string name)
+    {
+        return name.Split('(')[0];
     }
 }

@@ -26,6 +26,7 @@ public class Pool
         for (int i = 0; i < size; i++)
         {
             GameObject obj = GameObject.Instantiate(prefab, parent);
+            obj.name = name;
             obj.SetActive(false);
             pool.Push(obj);
         }
@@ -36,6 +37,7 @@ public class Pool
         if (pool.Count == 0)
         {
             GameObject obj = GameObject.Instantiate(prefab, parent);
+            obj.name = name;
             return obj;
         }
 

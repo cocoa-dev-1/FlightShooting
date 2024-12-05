@@ -248,8 +248,8 @@ MonoBehaviour:
     prefab: {fileID: 9048556282187106441, guid: e323d4e6088e27a47a8ed7acb9584f8a, type: 3}
     parent: {fileID: 0}
     size: 10
-  - name: FastBullet
-    prefab: {fileID: 9048556282187106441, guid: aac7db80cab34b34aafd5221f57b5b82, type: 3}
+  - name: PowerBullet
+    prefab: {fileID: 9048556282187106441, guid: 52e7015a13515084d839de93ac8b6e94, type: 3}
     parent: {fileID: 0}
     size: 10
   - name: Enemy
