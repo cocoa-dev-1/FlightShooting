@@ -197,6 +197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c84485d5350b30549b5c09287afc0498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: StraightBullet
+  name: FastBullet
   spead: 6
   power: 1
